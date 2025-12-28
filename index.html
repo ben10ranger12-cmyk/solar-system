@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System - Bootstrap</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card info-card text-white m-3">
+                    <div class="card-body">
+                        <h1 class="card-title h3 mb-2">Solar System</h1>
+                        <p class="card-text mb-0">Watch the planets orbit around the Sun. Hover over planets to see details!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="solar-container">
+        <div class="sun" data-bs-toggle="tooltip" data-bs-placement="top" title="The Sun - Our Star"></div>
+        
+        <div class="orbit mercury">
+            <div class="planet" 
+                 data-planet="Mercury" 
+                 data-bs-toggle="tooltip" 
+                 data-bs-placement="top" 
+                 title="Mercury - The smallest planet and closest to the Sun"></div>
+        </div>
+        
+        <div class="orbit venus">
+            <div class="planet" 
+                 data-planet="Venus" 
+                 data-bs-toggle="tooltip" 
+                 data-bs-placement="top" 
+                 title="Venus - The hottest planet in our solar system"></div>
+        </div>
+        
+        <div class="orbit earth">
+            <div class="planet" 
+                 data-planet="Earth" 
+                 data-bs-toggle="tooltip" 
+                 data-bs-placement="top" 
+                 title="Earth - Our home planet, the only known planet with life"></div>
+        </div>
+        
+        <div class="orbit mars">
+            <div class="planet" 
+                 data-planet="Mars" 
+                 data-bs-toggle="tooltip" 
+                 data-bs-placement="top" 
+                 title="Mars - The Red Planet, named after the Roman god of war"></div>
+        </div>
+        
+        <div class="orbit jupiter">
+            <div class="planet" 
+                 data-planet="Jupiter" 
+                 data-bs-toggle="tooltip" 
+                 data-bs-placement="top" 
+                 title="Jupiter - The largest planet, a gas giant"></div>
+        </div>
+        
+        <div class="orbit saturn">
+            <div class="planet" 
+                 data-planet="Saturn" 
+                 data-bs-toggle="tooltip" 
+                 data-bs-placement="top" 
+                 title="Saturn - Famous for its spectacular ring system"></div>
+        </div>
+        
+        <div class="orbit uranus">
+            <div class="planet" 
+                 data-planet="Uranus" 
+                 data-bs-toggle="tooltip" 
+                 data-bs-placement="top" 
+                 title="Uranus - An ice giant that rotates on its side"></div>
+        </div>
+        
+        <div class="orbit neptune">
+            <div class="planet" 
+                 data-planet="Neptune" 
+                 data-bs-toggle="tooltip" 
+                 data-bs-placement="top" 
+                 title="Neptune - The windiest planet in our solar system"></div>
+        </div>
+    </div>
+
+    <div class="control-panel">
+        <div class="btn-group-vertical" role="group">
+            <button class="btn btn-primary" id="pauseBtn">Pause</button>
+            <button class="btn btn-success" id="speedUpBtn">Speed Up</button>
+            <button class="btn btn-warning" id="slowDownBtn">Slow Down</button>
+            <button class="btn btn-info" id="resetBtn">Reset</button>
+        </div>
+    </div>
+
+    <!-- Modal for planet info -->
+    <div class="modal fade" id="planetModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white planet-info">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" id="planetName"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="planetDetails"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
